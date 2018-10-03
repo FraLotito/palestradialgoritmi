@@ -1,1 +1,1 @@
-# PalestraDiAlgoritmi2018
+# Palestra di Algoritmi 2018/2019
