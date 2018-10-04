@@ -17,7 +17,7 @@
 ## Bonus
 Avete risolto tutti i problemi della settimana ed avete voglia di farne altri? :sunglasses:
 
-Mandateci una mail!
+Abbiamo altri problemi già pronti, mandateci una mail!
 
 ## Soluzioni
 Le soluzioni saranno presentate durante il prossimo incontro e caricate in questa cartella, cercate di risolvere tutti i problemi prima di Venerdì prossimo!
