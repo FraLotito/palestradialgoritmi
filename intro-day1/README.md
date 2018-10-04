@@ -10,8 +10,8 @@
 ## Problemi della settimana
 * [luiss_azioni](https://training.olinfo.it/#/task/luiss_azioni/statement) - Gara di allenamento LUISS 2018
 * [gator_pcollatz](https://training.olinfo.it/#/task/gator_pcollatz/statement) - Gara di allenamento TOR Vergata 2016
-* [spartizione](https://training.olinfo.it/#/task/spartizione/statement) - Territoriali 2016
-* [turni](https://training.olinfo.it/#/task/turni/statement) - Territoriali 2012
+* [spartizione](https://training.olinfo.it/#/task/spartizione/statement) - OII - territoriali 2016
+* [turni](https://training.olinfo.it/#/task/turni/statement) - OII - territoriali 2012
 * [luiss_laurea](https://training.olinfo.it/#/task/luiss_laurea/statement) - Gara di allenamento LUISS 2018
 
 ## Bonus
