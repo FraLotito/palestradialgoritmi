@@ -23,3 +23,5 @@ Abbiamo altri problemi già pronti, mandateci una mail!
 
 ## Soluzioni
 Le soluzioni saranno presentate durante il prossimo incontro e caricate in questa cartella, cercate di risolvere tutti i problemi prima di Venerdì prossimo!
+
+![spoiler](http://i63.tinypic.com/2bpnd4.jpg)
