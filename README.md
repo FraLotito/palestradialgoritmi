@@ -28,9 +28,9 @@ Mail: oii.unitn@gmail.com
 
 [Francesco Lotito](https://github.com/FraLotito) - Mantainer repo
 
-Giulia Carocari - Mantainer repo
+[Giulia Carocari](https://github.com/geeooleea) - Mantainer repo
 
-Marta Fornasier - Mantainer repo
+[Marta Fornasier](https://github.com/MartaFornasier) - Mantainer repo
 
 Damiano Sartori
 
