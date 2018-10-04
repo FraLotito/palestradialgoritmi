@@ -121,10 +121,13 @@ int d = abs(b);
 ```
 A fine esecuzione c varrà 5 e d varrà 5.
 
+## Cose a cui prestare attenzione
 
+#### Integer overflow
+Quando lavorate con numeri molto grandi fate attenzione a non sforare il limite massimo dei numeri interi, infatti se un numero viene rappresentato su N bit, allora potrà contenere tutti i numeri nell'intervallo ![formula](http://latex.codecogs.com/gif.latex?[-2^{n-1};2^{n-1}-1]).
 
+In particolare:
+* Un intero a 32 bit (``` int ```) può arrivare fino a 2147483647 (thumb rule: può contenere numeri con 10 cifre)
+* Un intero a 64 bit (``` long / long long ```) può contenere numeri fino a 18 cifre e dovrebbe essere sufficiente per tutte le applicazioni del caso.
 
-
-
-
-
+Se non avete bisogno dei numeri negativi potete raddoppiare il valore massimo della rappresentazione considerando gli ``` unsigned int ``` e ``` unsigned long ```.
