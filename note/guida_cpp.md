@@ -79,7 +79,7 @@ v.resize(N);
 #### Sort
 Implementazione di un algoritmo di ordinamento (efficiente):
 ```cpp
-#include<algorithms>
+#include<algorithm>
 
 vector<int> v; //supponete sia riempito dai valori [1,6,5,9,10,-1,4]
 
