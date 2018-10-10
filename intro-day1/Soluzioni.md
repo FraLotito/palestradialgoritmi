@@ -23,14 +23,14 @@ Soluzioni che effettuano tutti i possibili confronti invece non sono sufficiente
 
 ## Easy 2
 ### Breve spiegazione del testo
-Il problema richiede, date N coppie di numeri interi, di trovare quale sia la massima somma tra i due numeri delle coppie che è anche pari. Se tale somma non esiste bisogna stampare -1.
+Il problema richiede, date N coppie di numeri interi positivi, di trovare quale sia la massima somma tra i due numeri delle coppie che è anche pari. Se tale somma non esiste bisogna stampare -1.
 
 ### Idee generali per risolvere l'esercizio
 La risoluzione si basa sempre sui massimi parziali, come nell'esercizio precedente. Le differenze sono:
 * Inizializziamo la variabile ```maxn``` a -1 per fare in modo che se non esiste nessuna somma pari il nostro programma stampi il valore atteso dal correttore
-* Prima di aggiornare la variabile che contiene il massimo effettuiamo la lettura di entrambi i numeri della coppia e controlliamo se la loro somma è pari (```a + b % 2 == 0```)
+* Prima di aggiornare la variabile che contiene il massimo effettuiamo la lettura di entrambi i numeri della coppia e controlliamo se la loro somma è pari (```(a + b) % 2 == 0```)
 
-__NOTA:__ se non esiste alcuna somma pari allora ```a + b % 2 == 0``` restituirà sempre ```false``` e il valore di ```maxn``` rimarrà -1 fino alla fine del ciclo, quando la variabile viene stampata sul file.
+__NOTA:__ se non esiste alcuna somma pari allora ```(a + b) % 2 == 0``` restituirà sempre ```false``` e il valore di ```maxn``` rimarrà -1 fino alla fine del ciclo, quando la variabile viene stampata sul file.
 
 ### Link al codice
 
