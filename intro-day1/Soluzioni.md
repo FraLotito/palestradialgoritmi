@@ -19,7 +19,7 @@ Dove trovare il codice della soluzione
 
 ### Idee alternative
 Anziché calcolare il massimo parziale subito dopo la lettura di ogni numero si può usare un array per memorizzare l'intera sequenza e poi calcolare il massimo iterando sull'array. Questa soluzione è accettabile, bisogna tuttavia fare attenzione allo spreco di memoria dato dal fatto di mantenere in memoria tutti i valori, anche quando questi non sono più necessari.
-Soluzioni che effettuano tutti i possibili confronti invece non sono sufficientemente efficienti.
+Soluzioni che effettuano tutti i possibili confronti (O(n^2)) invece non sono sufficientemente efficienti, come non lo sono quelle che prevedono di stampare l'ultimo elemento dell'array precedentemente ordinato (O(n log n)).
 
 ## Easy 2
 ### Breve spiegazione del testo
