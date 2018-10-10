@@ -1,0 +1,17 @@
+# Soluzioni Day1
+
+
+## Easy 1
+
+### Breve spiegazione del testo
+Il problema richiede di trovare il massimo di una sequenza di numeri interi compresi tra -1000 e 1000; è dato il numero di interi (N) nella sequenza contenuta nel file di input.
+### Idee generali per risolvere l'esercizio
+
+### Link al codice
+
+Dove trovare il codice della soluzione
+
+
+### Idee alternative
+
+C'erano altri modi di risolvere il problema?
