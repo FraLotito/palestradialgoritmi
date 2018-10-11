@@ -1,4 +1,3 @@
-//Lotito Francesco, 5/5
 #include<fstream>
 #include<vector>
 #include<algorithm>
