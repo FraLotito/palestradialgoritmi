@@ -48,8 +48,11 @@ Si può pensare di salvare tutti i valori in un vettore e calcolare tutte le pos
 ### Breve spiegazione del testo
 
 In questo problema vengono dati due algoritmi (di Collatz e Pollatz) che, partendo da un input N, generano una sequenza di numeri seguendo alcune regole. L'algoritmo di Collaz, dato un intero positivo N, è il seguente.
+
 (1) Se N vale 1, l’algoritmo termina.
+
 (2) Se N è pari, dividi N per 2, altrimenti (se N è dispari) moltiplicalo per **3** e aggiungi 1.
+
 L'algoritmo di Pollatz è analogo, ma prevede che al punto (2) si moltiplichi per **5** invece che per 3. Per tutti gli input N, il primo algoritmo termina. Per alcuni N, la lunghezza della sequenza di numeri calcolati con il secondo è minore di quella calcolata con il primo, mentre per altri N, Pollatz non termina mai. Dati due interi A e B (A ≤ B), il problema chiede quanti sono gli N, con A ≤ N ≤ B, per cui la lunghezza della sequenza di Pollatz calcolata a partire da N termina e ha lunghezza strettamente minore della corrispondente sequenza di Collatz.
 
 ### Idee generali per risolvere l'esercizio
