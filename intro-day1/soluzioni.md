@@ -38,3 +38,21 @@ Dove trovare il codice della soluzione
 
 ### Idee alternative
 Come in Easy 1, anche in questo caso si potevano salvare tutti i valori prima di elaborarli, le implicazioni sono le stesse già citate per il problema precedente.
+
+
+## Easy 3
+### Breve spiegazione del testo
+Il problema richiede, dati N numeri naturali, di trovare, per ogni possibile coppia di numeri, la somma massima che sia anche pari. Se tale somma non esiste, bisogna stampare -1.
+
+### Idee generali per risolvere l'esercizio
+Prima di tutto, una qualsiasi somma pari può essere ottenuta in due modi: dalla somma di due numeri pari o dalla somma di due numeri dispari. Quindi per avere la massima somma pari abbiamo due possibilità: la massima somma pari può essere data dalla somma dei due numeri pari più grandi oppure dalla somma dei due dispari maggiori. Troviamo quindi questi valori e poi confrontiamo le due somme. 
+
+__NOTA:__ Questa somma non esiste in poche situazioni: se non esiste nessuna coppia di numeri pari all'interno della sequenza e non esiste neanche una coppia di numeri dispari. Ovvero se ci sono al più due numeri: uno pari ed uno dispari.
+
+### Link al codice
+
+Dove trovare il codice della soluzione
+
+### Idee alternative
+Si può pensare di salvare tutti i valori in un vettore e calcolare tutte le possibili somme delle coppie (con due cicli for), controllando quando questa somma sia pari e tenendo il massimo memorizzato in una variabile. Questo è molto più costoso e rende l'algoritmo di complessità O(n^2), quando ora ha complessità O(n). 
+
