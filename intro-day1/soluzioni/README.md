@@ -43,3 +43,27 @@ __NOTA:__ Questa somma non esiste in poche situazioni: se non esiste nessuna cop
 ### Idee alternative
 Si può pensare di salvare tutti i valori in un vettore e calcolare tutte le possibili somme delle coppie (con due cicli for), controllando quando questa somma sia pari e tenendo il massimo memorizzato in una variabile. Questo è molto più costoso e rende l'algoritmo di complessità O(n^2), quando ora ha complessità O(n). 
 
+## Pollatz
+
+### Breve spiegazione del testo
+
+In questo problema vengono dati due algoritmi (di Collatz e Pollatz) che, partendo da un input N, generano una sequenza di numeri seguendo alcune regole. L'algoritmo di Collaz, dato un intero positivo N, è il seguente.
+(1) Se N vale 1, l’algoritmo termina.
+(2) Se N è pari, dividi N per 2, altrimenti (se N è dispari) moltiplicalo per **3** e aggiungi 1.
+L'algoritmo di Pollatz è analogo, ma prevede che al punto (2) si moltiplichi per **5** invece che per 3. Per tutti gli input N, il primo algoritmo termina. Per alcuni N, la lunghezza della sequenza di numeri calcolati con il secondo è minore di quella calcolata con il primo, mentre per altri N, Pollatz non termina mai. Dati due interi A e B (A ≤ B), il problema chiede quanti sono gli N, con A ≤ N ≤ B, per cui la lunghezza della sequenza di Pollatz calcolata a partire da N termina e ha lunghezza strettamente minore della corrispondente sequenza di Collatz.
+
+### Idee generali per risolvere l'esercizio
+Per semplicità indichiamo con c(N) la lunghezza della sequenza di Collatz calcolata da N e con p(N) la lunghezza di quella di Pollatz (ricordiamo che p(N) potrebbe essere infinito). Per risolvere l'esercizio, per ogni N compreso tra A e B, vogliamo calcolare c(N) e p(N) e vedere se p(N) è minore di c(N). Dato che non sappiamo se l'algoritmo di Pollatz termina, dobbiamo prima calcolare la lunghezza di quello di Collatz, c(N), e poi quella di Pollatz, fermandoci nel momento in cui questa supera c(N). 
+Per calcolare questi due valori è sufficiente usare dei cicli while, ad esempio per Collatz:
+```
+int c = 1;
+while(N != 1) {
+	if(N%2 == 0) N/=2;
+        else N = 3*N + 1;
+        c++;
+    }
+```
+
+### Idee alternative
+Invece di un ciclo while, per calcolare la lunghezza delle sequenze di Collatz e Pollatz, si potrebbe usare una funzione ricorsiva, la complessità dell'algoritmo non cambia.
+
