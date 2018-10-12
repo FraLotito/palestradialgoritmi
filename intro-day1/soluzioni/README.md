@@ -130,3 +130,33 @@ Il codice è abbastanza semplice, se abbiamo la possibilità di usare ancora il 
 
 ### Idee alternative
 Ci sono modi migliori per risolverlo, stay tuned.
+
+
+* ## Turni di guardia (turni)
+### Breve spiegazione del testo
+Il problema può essere visto in questo modo: avendo un intervallo `[0, K)`, bisogna riuscire a coprirlo tutto minimizzando il numero di intervallini `[A, B)` dati in input.
+
+### Idee generali per risolvere l'esercizio
+In questo problema si può arrivare molto velocemente alla soluzione se si riesce a stabilire che si tratta
+di un problema di tipo greedy. Si arriva a mostrare che è così tramite le seguenti osservazioni:
+* gli intervalli dei turni di guardia devono coprire completamente tutti i giorni, come da testo del
+problema, quindi esiste almeno un intervallo che inizia dal primo giorno:
+
+	* se è solo uno lo scelgo e questa scelta non può essere cambiata, perchè nessun altro intervallo
+potrebbe coprire il primo giorno
+
+	* se sono più di uno scelgo quello che ha la data di fine maggiore, perchè sceglierne un altro
+comporterebbe solo un numero minore di giorni di “copertura” e nessun vantaggio. Anche
+in questo caso la scelta non potrà essere modificata successivamente, perchè nessuna altra
+scelta potrebbe portarmi in una situazione migliore
+
+* a questo punto la data di fine del turno scelto sarà la nuova data di inizio per scegliere i turni
+successivi, reiterando il procedimento dal punto 1, fino a quando non verrà selezionato un turno
+che finisce l’ultimo giorno.
+
+In questo modo si è arrivati alla conclusione che il problema è di tipo greedy, e quindi conviene ordinare
+i turni di guardia usando come parametro per l’ordinamento il giorno di inizio, in modo da
+poter implementare in maniera efficiente l’algoritmo appena descritto.
+
+(Grazie al prof. Bugatti per questa spiegazione, ho usato la sua perché è chiarissima e non avrei saputo far di meglio)
+
