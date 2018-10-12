@@ -1,7 +1,7 @@
 # Soluzioni Day1
 
 
-## Easy 1
+## Trova il massimo (easy1)
 ### Breve spiegazione del testo
 Il problema richiede di trovare il massimo di una sequenza di numeri interi compresi tra -1000 e 1000; è dato il numero di interi (N) nella sequenza contenuta nel file di input.
 
@@ -16,7 +16,7 @@ Anziché calcolare il massimo parziale subito dopo la lettura di ogni numero si 
 Soluzioni che effettuano tutti i possibili confronti (O(n^2)) invece non sono sufficientemente efficienti, come non lo sono quelle che prevedono di stampare l'ultimo elemento dell'array precedentemente ordinato (O(n log n)).
 
 
-## Easy 2
+## Trova la somma pari massima (easy2)
 ### Breve spiegazione del testo
 Il problema richiede, date N coppie di numeri interi positivi, di trovare quale sia la massima somma tra i due numeri delle coppie che è anche pari. Se tale somma non esiste bisogna stampare -1.
 
@@ -31,7 +31,7 @@ __NOTA:__ se non esiste alcuna somma pari allora ```(a + b) % 2 == 0``` restitui
 Come in Easy 1, anche in questo caso si potevano salvare tutti i valori prima di elaborarli, le implicazioni sono le stesse già citate per il problema precedente.
 
 
-## Easy 3
+## Trova la somma pari massima v2.0 (easy3)
 ### Breve spiegazione del testo
 Il problema richiede, dati N numeri naturali, di trovare, per ogni possibile coppia di numeri, la somma massima che sia anche pari. Se tale somma non esiste, bisogna stampare -1.
 
@@ -54,7 +54,7 @@ Applichiamo ancora lo stesso principio di risoluzione usato per Easy 1. Iniziali
 ### Idee alternative
 La nostra soluzione tiene in memoria di volta in volta solo il numero x e il precedente, è ovviamente ancora possibile salvare tutta la sequeza in un array e poi lavorare sulla sequenza salvata.
 
-## Pollatz
+## Sequenza di Pollatz (pcollatz)
 
 ### Breve spiegazione del testo
 
@@ -85,7 +85,7 @@ Invece di un ciclo while, per calcolare la lunghezza delle sequenze di Collatz e
 
 ### Breve spiegazione del testo
 
-è dato un numero G di oggetti (le gemme) da spartire tra Totò e i suoi compagni, in tutto P persone. Ad ogni ciclo di spartizione i, Totò prende i gemme, mentre i suoi complici ne ricevono 1 ciascuno. Bisogna trovare quanti oggetti spettano in tutto a Totò.
+È dato un numero G di oggetti (le gemme) da spartire tra Totò e i suoi compagni, in tutto P persone. Ad ogni ciclo di spartizione i, Totò prende i gemme, mentre i suoi complici ne ricevono 1 ciascuno. Bisogna trovare quanti oggetti spettano in tutto a Totò.
 
 ### Idee generali per risolvere l'esercizio
 Simuliamo la spartizione con un ciclo sul numero di gemme rimanenti e teniamo in un contatore il numero di gemme che abbiamo assegnato a Totò:
