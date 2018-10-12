@@ -158,5 +158,5 @@ In questo modo si è arrivati alla conclusione che il problema è di tipo greedy
 i turni di guardia usando come parametro per l’ordinamento il giorno di inizio, in modo da
 poter implementare in maniera efficiente l’algoritmo appena descritto.
 
-(Grazie al prof. Bugatti per questa spiegazione, ho usato la sua perché è chiarissima e non avrei saputo far di meglio)
+__NOTA:__ Grazie al prof. Bugatti per questa spiegazione, ho usato la sua perché è chiarissima e non avrei saputo far di meglio
 
