@@ -43,6 +43,17 @@ __NOTA:__ Questa somma non esiste in poche situazioni: se non esiste nessuna cop
 ### Idee alternative
 Si può pensare di salvare tutti i valori in un vettore e calcolare tutte le possibili somme delle coppie (con due cicli for), controllando quando questa somma sia pari e tenendo il massimo memorizzato in una variabile. Questo è molto più costoso e rende l'algoritmo di complessità O(n^2), quando ora ha complessità O(n). 
 
+## Fluttuazioni finanziare (azioni)
+
+### Breve spiegazione del testo
+Il testo richiede di trovare, data una sequenza A di N numeri interi, la massima differenza in valore assoluto tra due numeri consecutivi della sequenza stessa.
+
+### Idee generali per risolvere l'esercizio
+Applichiamo ancora lo stesso principio di risoluzione usato per Easy 1. Inizializziamo il massimo a |A[1] - A[2]|, poi calcoliamo, per ogni valore x in A[2..n-1], la differenza tra x e il precedente e andiamo ad aggiornare il massimo solo se tale differenza è maggiore di quella trovata in precedenza.
+
+### Idee alternative
+La nostra soluzione tiene in memoria di volta in volta solo il numero x e il precedente, è ovviamente ancora possibile salvare tutta la sequeza in un array e poi lavorare sulla sequenza salvata.
+
 ## Pollatz
 
 ### Breve spiegazione del testo
@@ -58,7 +69,7 @@ L'algoritmo di Pollatz è analogo, ma prevede che al punto (2) si moltiplichi pe
 ### Idee generali per risolvere l'esercizio
 Per semplicità indichiamo con c(N) la lunghezza della sequenza di Collatz calcolata da N e con p(N) la lunghezza di quella di Pollatz (ricordiamo che p(N) potrebbe essere infinito). Per risolvere l'esercizio, per ogni N compreso tra A e B, vogliamo calcolare c(N) e p(N) e vedere se p(N) è minore di c(N). Dato che non sappiamo se l'algoritmo di Pollatz termina, dobbiamo prima calcolare la lunghezza di quello di Collatz, c(N), e poi quella di Pollatz, fermandoci nel momento in cui questa supera c(N). 
 Per calcolare questi due valori è sufficiente usare dei cicli while, ad esempio per Collatz:
-```
+```cpp
 int c = 1;
 while(N != 1) {
 	if(N%2 == 0) N/=2;
@@ -70,3 +81,25 @@ while(N != 1) {
 ### Idee alternative
 Invece di un ciclo while, per calcolare la lunghezza delle sequenze di Collatz e Pollatz, si potrebbe usare una funzione ricorsiva, la complessità dell'algoritmo non cambia.
 
+## La spartizione di Totò (spartizione)
+
+### Breve spiegazione del testo
+
+è dato un numero G di oggetti (le gemme) da spartire tra Totò e i suoi compagni, in tutto P persone. Ad ogni ciclo di spartizione i, Totò prende i gemme, mentre i suoi complici ne ricevono 1 ciascuno. Bisogna trovare quanti oggetti spettano in tutto a Totò.
+
+### Idee generali per risolvere l'esercizio
+Simuliamo la spartizione con un ciclo sul numero di gemme rimanenti e teniamo in un contatore il numero di gemme che abbiamo assegnato a Totò:
+```cpp
+while(G-i-P+1>=0) {
+        G = G-i-P+1;
+        res += i;
+        i++;
+    }
+```
+
+### Idee alternative
+Si potrebbe implementare la risoluzione dell'equazione:
+
+![formula](https://latex.codecogs.com/gif.latex?\sum\limits_{i=0}^k&space;i&space;&plus;&space;k(P-1)&space;=&space;\frac{k(k-1)}{2}&space;&plus;&space;k(P-1)&space;=&space;G)
+
+Tuttavia questo richiede di gestire tutti i casi in cui il numero di gemme non può essere correttamente spartito tra i ladri.
