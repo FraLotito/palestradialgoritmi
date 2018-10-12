@@ -1,7 +1,7 @@
 # Soluzioni Day1
 
 
-## Trova il massimo (easy1)
+* ## Trova il massimo (easy1)
 ### Breve spiegazione del testo
 Il problema richiede di trovare il massimo di una sequenza di numeri interi compresi tra -1000 e 1000; è dato il numero di interi (N) nella sequenza contenuta nel file di input.
 
@@ -16,7 +16,7 @@ Anziché calcolare il massimo parziale subito dopo la lettura di ogni numero si 
 Soluzioni che effettuano tutti i possibili confronti (O(n^2)) invece non sono sufficientemente efficienti, come non lo sono quelle che prevedono di stampare l'ultimo elemento dell'array precedentemente ordinato (O(n log n)).
 
 
-## Trova la somma pari massima (easy2)
+* ## Trova la somma pari massima (easy2)
 ### Breve spiegazione del testo
 Il problema richiede, date N coppie di numeri interi positivi, di trovare quale sia la massima somma tra i due numeri delle coppie che è anche pari. Se tale somma non esiste bisogna stampare -1.
 
@@ -31,7 +31,7 @@ __NOTA:__ se non esiste alcuna somma pari allora ```(a + b) % 2 == 0``` restitui
 Come in Easy 1, anche in questo caso si potevano salvare tutti i valori prima di elaborarli, le implicazioni sono le stesse già citate per il problema precedente.
 
 
-## Trova la somma pari massima v2.0 (easy3)
+* ## Trova la somma pari massima v2.0 (easy3)
 ### Breve spiegazione del testo
 Il problema richiede, dati N numeri naturali, di trovare, per ogni possibile coppia di numeri, la somma massima che sia anche pari. Se tale somma non esiste, bisogna stampare -1.
 
@@ -43,7 +43,7 @@ __NOTA:__ Questa somma non esiste in poche situazioni: se non esiste nessuna cop
 ### Idee alternative
 Si può pensare di salvare tutti i valori in un vettore e calcolare tutte le possibili somme delle coppie (con due cicli for), controllando quando questa somma sia pari e tenendo il massimo memorizzato in una variabile. Questo è molto più costoso e rende l'algoritmo di complessità O(n^2), quando ora ha complessità O(n). 
 
-## Fluttuazioni finanziare (azioni)
+* ## Fluttuazioni finanziare (azioni)
 
 ### Breve spiegazione del testo
 Il testo richiede di trovare, data una sequenza A di N numeri interi, la massima differenza in valore assoluto tra due numeri consecutivi della sequenza stessa.
@@ -54,7 +54,7 @@ Applichiamo ancora lo stesso principio di risoluzione usato per Easy 1. Iniziali
 ### Idee alternative
 La nostra soluzione tiene in memoria di volta in volta solo il numero x e il precedente, è ovviamente ancora possibile salvare tutta la sequeza in un array e poi lavorare sulla sequenza salvata.
 
-## Sequenza di Pollatz (pcollatz)
+* ## Sequenza di Pollatz (pcollatz)
 
 ### Breve spiegazione del testo
 
@@ -81,7 +81,7 @@ while(N != 1) {
 ### Idee alternative
 Invece di un ciclo while, per calcolare la lunghezza delle sequenze di Collatz e Pollatz, si potrebbe usare una funzione ricorsiva, la complessità dell'algoritmo non cambia.
 
-## La spartizione di Totò (spartizione)
+* ## La spartizione di Totò (spartizione)
 
 ### Breve spiegazione del testo
 
