@@ -2,7 +2,7 @@
 
 * ## Cubetti colorati
 ### Breve spiegazione del testo
-Vengono dati in input N cubetti (numerati da 0 a N-1), ciascuno dei quali è di un certo colore (un intero tra 1 e N). Dobbiamo fare in modo, tramite una chiamata alla procedura Vernicia(cubetto, nuovo_colore), che alla fine dell'esecuzione tutti i cubetti siano di colori diversi. La soluzione deve effettuare il minimo numero di ri-colorazioni possibile.
+Vengono dati in input N cubetti (numerati da 0 a N-1), ciascuno dei quali è di un certo colore (un intero tra 1 e N). Dobbiamo fare in modo, tramite una chiamata alla procedura ```Vernicia(cubetto, nuovo_colore)```, che alla fine dell'esecuzione tutti i cubetti siano di colori diversi. La soluzione deve effettuare il minimo numero di ri-colorazioni possibile.
 
 ### Idee generali per risolvere l'esercizio
 Scorrendo una volta tutti i cubetti e i rispettivi colori identifichiamo tutti i colori che non sono ancora stati usati (quelli che avranno contatore di utilizzo = 0) inserendoli in una lista, andremo poi ad usarli per verniciare quei cubetti che, ad una successiva passata, risultano usare un colore ripetuto. In questo modo abbiamo la garanzia di non avere alcun colore ripetuto alla fine della procedura e di usare anche il numero minimo di riverniciature, ché andiamo a riverniciare solo quei cubetti che sono di un colore già presente nella sequenza.
@@ -14,7 +14,7 @@ L'implementazione è abbastanza libera e può fare uso delle più svariate strut
 
 * ## Grand Prix
 ### Breve spiegazione del testo
-Il problema richiede, data una sequenza di interi, che definisce l'ordine di partenza delle vetture, e una serie di sorpassi tra le auto (coppie _(sorpassante, sorpassato)_) di trovare quale sia la il pilota in testa alla fine della gara.
+Il problema richiede, data una sequenza di interi, che definisce l'ordine di partenza delle vetture, e una serie di sorpassi tra le auto (coppie _(sorpassante, sorpassato)_) di trovare quale sia il pilota in testa alla fine della gara.
 
 ### Idee generali per risolvere l'esercizio
 Simuliamo i vari sorpassi, uno dopo l'altro, invertendo nella classifica (nel vettore delle posizioni) le auto coinvolte. Nello specifico dobbiamo, per ogni coppia, cercare i valori nel vettore e scambiarli (usiamo una terza variabile d'appoggio, procedura standard). Al termine dell'esecuzione il vincitore della corsa occupa la prima posizione dell'array.
@@ -29,7 +29,11 @@ Sono dati in input N numeri interi, ciascuno dei quali rappresenta la gradazione
 * Non ci possono essere nella sottosequenza due numeri che sono contigui nella sequenza iniziale dei valori.
 
 ### Idee generali per risolvere l'esercizio
-Usiamo la tecnica del backtracking (ricorsivo): proviamo tutte le sottosequenza possibili. Per fare ciò, consideriamo per ogni vino la massima sottosequenza che possiamo ottenere scegliendo questo vino ```cpp assaggia(i+2,assaggiati+1,a[i])``` (notare come in questo caso ci spostiamo avanti di due posizioni nella sequenza dei vini) e passando direttamente al prossimo ```cpp assaggia(i+1,assaggiati,ultimo)``` (senza dunque incrementare il numero dei vini assaggiati). Nel caso in cui il vino che stiamo considerando non possa essere inserito nella sequenza di scelte correnti (ovvero quando ```a[i] < ultimo```), l'unica possibile azione che possiamo effettuare è passare al prossimo vino. Finiti i vini da assaggiare, ritorniamo alla funzione chiamante il numero di vini effettivamente considerati dalla sequenza di scelte che ha portato fino a quel punto.
+Usiamo la tecnica del backtracking (ricorsivo): proviamo tutte le sottosequenza possibili. Per fare ciò, consideriamo per ogni vino la massima sottosequenza che possiamo ottenere
+* scegliendo questo vino ```assaggia(i+2,assaggiati+1,a[i])``` (notare come in questo caso ci spostiamo avanti di due posizioni nella sequenza dei vini)
+* passando direttamente al prossimo ```assaggia(i+1,assaggiati,ultimo)``` (senza dunque incrementare il numero dei vini assaggiati).
+
+Nel caso in cui il vino che stiamo considerando non possa essere inserito nella sequenza di scelte correnti (ovvero quando ```a[i] < ultimo```), l'unica possibile azione che possiamo effettuare è passare al prossimo vino. Finiti i vini da assaggiare, ritorniamo alla funzione chiamante il numero di vini effettivamente considerati dalla sequenza di scelte che ha portato fino a quel punto; al ritorno dalla ricorsione i-esima viene scelto il valore più alto tra scelgo/non scelgo il vino i.
 
 ### Idee alternative
-In questo caso, visto il numero ridotto di vini nella sequenza, si può tranquillamente applicare la tecnica del backtracking, che ha costo computazionale _O(2^N)_; tuttavia se la quantità di vini coinvolti fosse maggiore sarebbe conveniente ridurre la complessità con la tecnica di __programmazione dinamica__, o nella forma ricorsiva (_Memoization_) o in quella iterativa.
+In questo caso, visto il numero ridotto di vini nella sequenza, si può tranquillamente applicare la tecnica del backtracking, che ha costo computazionale _O(2^N)_; tuttavia se la quantità di vini coinvolti fosse maggiore sarebbe conveniente ridurre la complessità con la tecnica di __programmazione dinamica__, o nella forma ricorsiva (_Memoization_) o in quella iterativa: "l'implementazione è lasciata al lettore come esercizio".
