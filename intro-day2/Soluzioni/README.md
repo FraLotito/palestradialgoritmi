@@ -23,6 +23,7 @@ Simuliamo i vari sorpassi, uno dopo l'altro, invertendo nella classifica (nel ve
 A me non ne viene in mente nessuna, ma se voi ne avete trovate altre siamo ben lieti di sentirle :wink:
 
 * ## Sommelier
+![Wine](https://i.pinimg.com/originals/c0/ef/1b/c0ef1ba1c53b3cc1dc07d63dafa68ad0.jpg)
 ### Breve spiegazione del testo
 Sono dati in input N numeri interi, ciascuno dei quali rappresenta la gradazione alcolica di un certo vino. Il problema richiede di trovare la lunghezza della massima sottosequenza di questi numeri tale che:
 * La sottosequenza è crescente
