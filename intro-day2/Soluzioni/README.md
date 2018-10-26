@@ -1,17 +1,5 @@
 # Soluzioni Day2
 
-* ## Cubetti colorati
-### Breve spiegazione del testo
-Vengono dati in input N cubetti (numerati da 0 a N-1), ciascuno dei quali è di un certo colore (un intero tra 1 e N). Dobbiamo fare in modo, tramite una chiamata alla procedura ```Vernicia(cubetto, nuovo_colore)```, che alla fine dell'esecuzione tutti i cubetti siano di colori diversi. La soluzione deve effettuare il minimo numero di ri-colorazioni possibile.
-
-### Idee generali per risolvere l'esercizio
-Scorrendo una volta tutti i cubetti e i rispettivi colori identifichiamo tutti i colori che non sono ancora stati usati (quelli che avranno contatore di utilizzo = 0) inserendoli in una lista, andremo poi ad usarli per verniciare quei cubetti che, ad una successiva passata, risultano usare un colore ripetuto. In questo modo abbiamo la garanzia di non avere alcun colore ripetuto alla fine della procedura e di usare anche il numero minimo di riverniciature, ché andiamo a riverniciare solo quei cubetti che sono di un colore già presente nella sequenza.
-
-### Idee alternative
-L'implementazione è abbastanza libera e può fare uso delle più svariate strutture dati, in particolare:
-* Per trovare i colori inutilizzati: ```std::bitset``` (dalla STL del C++ - minimizza l'uso della memoria), oppure più semplicemente un ```bool[]``` o un ```int[]``` (che conta anche il numero di occorrenze per quel colore).
-* Per trovare il prossimo colore da utilizzare per la verniciatura: ```std::list```, ```std::stack``` (accesso in tempo costante al prossimo colore nella struttura), oppure più semplicemente si può riscorrere dall'inizio il vettore/la struttura dati di cui al punto precedente finché non si trova un valore 0; in ogni caso la complessità computazionale non cambia. 
-
 * ## Grand Prix
 ### Breve spiegazione del testo
 Il problema richiede, data una sequenza di interi, che definisce l'ordine di partenza delle vetture, e una serie di sorpassi tra le auto (coppie _(sorpassante, sorpassato)_) di trovare quale sia il pilota in testa alla fine della gara.
@@ -38,3 +26,24 @@ Nel caso in cui il vino che stiamo considerando non possa essere inserito nella 
 
 ### Idee alternative
 In questo caso, visto il numero ridotto di vini nella sequenza, si può tranquillamente applicare la tecnica del backtracking, che ha costo computazionale _O(2^N)_; tuttavia se la quantità di vini coinvolti fosse maggiore sarebbe conveniente ridurre la complessità con la tecnica di __programmazione dinamica__, o nella forma ricorsiva (_Memoization_) o in quella iterativa: "l'implementazione è lasciata al lettore come esercizio".
+
+* ## Piastrelle
+### Breve spiegazione del testo
+Abbiamo 2 diverse tipologia di piastrelle da piazzare, rispettivamente di lunghezza 1 e 2. Dobbiamo stampare tutti i possibili modi di piazzare le piastrelle in modo che la somma delle lunghezze sia uguale ad N (acquisito in input).
+
+### Idee generali per risolvere l'esercizio
+Semplicemente proviamo tutti i possibili modi di piazzare le piastrelle (backtrack) e stampiamo i modi validi (lunghezza == N).
+
+### Idee alternative
+Non ce ne sono.
+
+* ## Interrogazioni
+### Breve spiegazione del testo
+Abbiamo N quesiti diversi ognuno con difficoltà D<sub>i</sub>, dobbiamo selezionare un sottoinsieme S di K quesiti tale che la differenza d tra max(S) e min(S) sia la minore possibile, dobbiamo poi stampare in output d.
+
+### Idee generali per risolvere l'esercizio
+Ordiniamo gli N quesiti per difficoltà crescente, faccio scorrere una finestra di lunghezza K sul vettore delle difficoltà D. In questo modo ho che l'elemento con indice i avrà difficoltà minima e l'elemento con indice i+K-1 avrà difficoltà massima nel sottoinsieme S di K elementi considerato. A questo punto la risposta è ```min(D[i+K-1] - D[i])``` dove i è compreso tra 0 ed N-K.
+
+
+
+
