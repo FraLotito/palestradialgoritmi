@@ -69,6 +69,6 @@ Dati in input due interi N ed M, vogliamo calcolare l'N-esimo numero di Figonacc
 ### Idee generali per risolvere l'esercizio
 Semplifichiamo prima di tutto l'espressione per calcolare G(n+1):
 
-$$G_{n+1} = nG(n) − (G(n-1) + G(n-2) + ... + G(0))$$. 
+G(n+1) = nG(n) − (G(n-1) + G(n-2) + ... + G(0)).
 
 Ci accorgiamo così che è molto comodo avere memorizzata la somma dei primi n-1 numeri di Figonacci per calcolare l'(n+1)-esimo. Usiamo un vettore per memorizzare i numeri di Figonacci che calcoliamo man mano e uno per memorizzare le somme parziali S(n-1) = G(n-1) + G(n-2) + ... + G(0) della sequenza di Figonacci. Partendo da G(0) = −1 e G(1) = 0, con un ciclo for calcoliamo G(2) e S(0), G(3) e S(1), eccetera, usando la formula. Ricordo che per calcolare G(n+1) servirà S(n-1) memorizzata al passo precedente. Per ogni numero G(n) che calcoliamo, salviamo il resto dato da G(n) diviso per M. Questo perchè nel risultato finale ci interessa solo G(N) modulo M. Salvare ad ogni passo G(n)%M o calcolare solamente alla fine G(N)%M è la stessa cosa, ma ci permette di memorizzare in memoria numeri più piccoli.
