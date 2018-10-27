@@ -45,5 +45,16 @@ Abbiamo N quesiti diversi ognuno con difficoltà D<sub>i</sub>, dobbiamo selezio
 Ordiniamo gli N quesiti per difficoltà crescente, facciamo scorrere una finestra di lunghezza K sul vettore delle difficoltà D. In questo modo abbiamo che l'elemento con indice i avrà difficoltà minima e l'elemento con indice i+K-1 avrà difficoltà massima nel sottoinsieme S di K elementi considerato. A questo punto la risposta è ```min(D[i+K-1] - D[i])``` per i compreso tra 0 ed N-K.
 
 
+* ## Domino massimale
+### Breve spiegazione del testo
+Sono date N tessere di domino, contenenti due numeri tra 0 e 6. Due tessere possono essere concatenate se messe a contatto con lo stesso numero (e per essere concatenate possono essere ruotate). Il problema chiede di trovare il maggior numero di tessere concatenabili. 
+
+### Idee generali per risolvere l'esercizio
+Dato che abbiamo in input al massimo 10 tessere, l'idea più semplice, cioè provare tutte le combinazioni possibili, funziona. L'idea quindi è quella di provare ad usare una tessera ad un certo punto della catena, vedere a che lunghezza si arriva, e poi provare a non usarla. Per fare ciò usiamo un vettore booleano per memorizzare se ogni tessera è stata usata o meno. Usiamo una funzione ricorsiva ```solve(int tessera, int len)```, che cerca di aggiungere una tessera ad una catena lunga ```len``` e che termina con valore ```tessera```. Nella funzione ricorsiva scorriamo tra le tessere libere, se ne troviamo una compatibile (da un lato e/o dall'altro) la proviamo ad unire (ci segnamo di averla usata), richiamiamo la funzione solve e dopo la chiamata la torniamo a segnare come libera. Così facendo esaminiamo appunto tutte le possibili scelte e tra tutti i valori ```len``` nella funzione ```solve``` memorizziamo il massimo.
+
+*Nota: nel main avremo un ciclo for che esamina tutte le possibilità per le tessere di partenza (girate da un lato o dall'altro), prova con una tessera (la segna usata), chiama la funzione solve e poi la libera.
+
+### Idee alternative
+Nella soluzione che vi proponiamo le tessere sono memorizzate in un vettore di coppie di interi ```pair<int, int>```, può essere usata anche una matrice Nx2.
 
 
