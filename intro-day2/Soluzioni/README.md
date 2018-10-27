@@ -60,17 +60,15 @@ Nella soluzione che vi proponiamo le tessere sono memorizzate in un vettore di c
 
 * ## Numeri di Figonacci
 ### Breve spiegazione del testo
-I numeri di Figonacci sono costruiti così. L'(n+1)-esimo numero $G_{n+1}$, eccetto per $G_0 = −1$ e $G_1 = 0$ dati inizialmente, si calcola così:
+I numeri di Figonacci sono costruiti così. L'(n+1)-esimo numero G(n+1), eccetto per G(0) = −1 e G(1) = 0 dati inizialmente, si calcola come:
 
-$$ G_{n+1} = (G_n − G_{n−1}) + (G_n − G_{n−2}) + . . . + (G_n − G_2) + (G_n − G_1) + (G_n − G_0) $$. 
+G(n+1) = (G(n) − G(n-1)) + (G(n) − G(n-2)) + . . . + (G(n) − G(2)) + (G(n) − G(1)) + (G(n) − G(0)). 
 
-Dati in input due interi N ed M, vogliamo calcolare l'N-esimo numero di Figonacci $G_N$ modulo M.
-
+Dati in input due interi N ed M, vogliamo calcolare l'N-esimo numero di Figonacci G(N) modulo M.
 
 ### Idee generali per risolvere l'esercizio
-Semplifichiamo prima di tutto l'espressione per calcolare $G_{n+1}$:
+Semplifichiamo prima di tutto l'espressione per calcolare G(n+1):
 
-$$G_{n+1} = n(G_n) − (G_{n−1}+G_{n−2}+...+G_0)$$. 
+$$G_{n+1} = nG(n) − (G(n-1) + G(n-2) + ... + G(0))$$. 
 
-Ci accorgiamo così che è molto comodo avere memorizzata la somma dei primi n-1 numeri di Figonacci per calcolare l'(n+1)-esimo. Usiamo un vettore per memorizzare i numeri di Figonacci che calcoliamo man mano e uno per memorizzare le somme parziali $S_{n-1} = G_{n−1}+G_{n−2}+...+G_0$ della sequenza di Figonacci. Partendo da $G_0 = −1$ e $G_1 = 0$, con un ciclo for calcoliamo $G_2$ e $S_0$, $G_3$ e $S_1$, eccetera, usando la formula. Per ogni numero che calcoliamo, salviamo poi il risultato diviso per M, dato che nel risultato finale ci interessa solo $G_N$ modulo M. Salvare ad ogni passo $G_i%M$ o calcolare solamente alla fine $G_N%M$ è la stessa cosa, ma ci permette di memorizzare in memoria numeri più piccoli.
-
+Ci accorgiamo così che è molto comodo avere memorizzata la somma dei primi n-1 numeri di Figonacci per calcolare l'(n+1)-esimo. Usiamo un vettore per memorizzare i numeri di Figonacci che calcoliamo man mano e uno per memorizzare le somme parziali S(n-1) = G(n-1) + G(n-2) + ... + G(0) della sequenza di Figonacci. Partendo da G(0) = −1 e G(1) = 0, con un ciclo for calcoliamo G(2) e S(0), G(3) e S(1), eccetera, usando la formula. Ricordo che per calcolare G(n+1) servirà S(n-1) memorizzata al passo precedente. Per ogni numero G(n) che calcoliamo, salviamo il resto dato da G(n) diviso per M. Questo perchè nel risultato finale ci interessa solo G(N) modulo M. Salvare ad ogni passo G(n)%M o calcolare solamente alla fine G(N)%M è la stessa cosa, ma ci permette di memorizzare in memoria numeri più piccoli.
