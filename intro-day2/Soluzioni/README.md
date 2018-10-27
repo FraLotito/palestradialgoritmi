@@ -57,12 +57,28 @@ Nota: nel main avremo un ciclo for che esamina tutte le possibilità per le tess
 ### Idee alternative
 Nella soluzione che vi proponiamo le tessere sono memorizzate in un vettore di coppie di interi ```pair<int, int>```, può essere usata anche una matrice Nx2.
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [['$','$'], ['\\(','\\)']],
+processEscapes: true},
+jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+TeX: {
+extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+equationNumbers: {
+autoNumber: "AMS"
+}
+}
+});
+</script>
+
 
 * ## Numeri di Figonacci
 ### Breve spiegazione del testo
 I numeri di Figonacci sono costruiti così. L'(n+1)-esimo numero $G_{n+1}$, eccetto per $G_0 = −1$ e $G_1 = 0$ dati inizialmente, si calcola così:
 
-\\( G_{n+1} = (G_n − G_{n−1}) + (G_n − G_{n−2}) + . . . + (G_n − G_2) + (G_n − G_1) + (G_n − G_0) )//. 
+$$ G_{n+1} = (G_n − G_{n−1}) + (G_n − G_{n−2}) + . . . + (G_n − G_2) + (G_n − G_1) + (G_n − G_0) $$. 
 
 Dati in input due interi N ed M, vogliamo calcolare l'N-esimo numero di Figonacci $G_N$ modulo M.
 
