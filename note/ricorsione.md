@@ -1,5 +1,102 @@
+# Funzioni
+
+> In un programma è sempre opportuno e conveniente strutturare il codice raggruppandone
+> delle sue parti in **sotto-programmi autonomi**, detti **funzioni**, che vengono eseguite in ogni
+> punto in cui è richiesto.
+
+### Perché?
+Le funzioni permettono di ridurre la duplicazione di codice, di raggruppare più operazioni per crearne una più complessa (es. ```stampa_array(v)```) e dunque di semplificare la scrittura e la lettura del codice da parte di altri (dove "altri" comprende anche voi il giorno dopo che lo avete scritto :wink:). Inoltre, molti problemi possono essere risolti con le funzioni ricorsive.
+### Come?
+Ogni funzione è composta di 4 elementi:
+* __Nome__: sequenza di caratteri che identifica la funzione e permette di usarla
+* __Lista di parametri__: insieme di variabili locali che possono essere utilizzate nel corpo della funzione
+* __Valore di ritorno__: quando la funzione ritorna il controllo al punto del codice in cui è stata chiama, può ritornare un valore, che può essere usato come un qualunque altro r-value.
+
+   > con __r-value__ si intendono tutte le espressioni che possono stare a _destra_ di un assegnamento, ad esempio in `x = 1;`, `1` è l'_r-value_, mentre `x` è un __l-value__, ovvero un'espressione che può stare a sinistra dell'operatore `=`, e che fa da "contenitore" di r-value. As a rule of thumb, le variabili e le _dereference_ (`\*p`) di puntatori sono _l-value_, mentre le espressioni aritmetiche e i valori di ritorno sono _r-value_.
+   Se il tipi di ritorno è `void` si parla di __procedura__ (anziché di funzione), l'unica differenza è che lo statement di return in questo caso non è richiesto (si può però utilizzare per restituire "prematuramente" il controllo al chiamante).
+* __Corpo/codice__: Qui si scrive il codice vero e proprio, "quello che la funzione deve fare quando viene invocata".
+
+#### Dichiarazione e definizione
+I primi 3 dei 4 elementi sopra descritti compongono la __firma__ di una funzione. Questa può essere usata per _dichiarare_ l'esistenza della funzione in un punto del programma diverso (un diverso file o nello stesso file ma in una posizione precedente) da quello in cui la funzione è effettivamente _definita_, ovvero dove sono scritte sia la sua firma che il codice.
+Per dichiarare e dunque poter usare la funzione è sufficiente scrivere:
+```cpp
+tipo_di_ritorno nome_della_funzione(tipo_parametro1 nome_parametro1, tipo2 nome2, ...);
+```
+Da questo punto, nel codice del nostro programma, noi potremo usare questa funzione come se fosse contenuta in una delle librerie che usiamo normalmente (es. `max(a,b)`in `cmath`).
+Ovviamente dovremo da qualche parte scrivere anche quello che la funzione fa, inserendo questo codice ad esempio sotto la funzione `main()` del nostro programma:
+```cpp
+tipo_di_ritorno nome_della_funzione(tipo_parametro1 nome_parametro1, tipo2 nome2, ...) {
+    tipo_di_ritono res;
+    // Operazioni varie che usano i parametri e assegnano un valore a res
+    return res;
+}
+```
+Si può evitare di dichiarare la funzione scrivendo la definizione della funzione direttamente prima della parte di codice in cui dobbiamo usarla (es. in `main()`), tuttavia, man mano che il codice diventa più strutturato potrebbe essere più conveniente avere la funzione principale (`main()`) più "in vista" rispetto a quelle ausiliarie.
+
+#### In memoria
+Nella memoria del computer la memoria riservata a ciascuna funzione è allocata secondo una struttura a __stack__ o __pila__, in cui si può accedere ogni volta solo all'elemento inserito più di recente. Questo significa, in termini di funzioni, che il controllo del programma appartiene sempre e solo alla funzione che è stata chiamata per ultima, ovvero quella che sta in cima alla pila.
+![Passaggio di parametri per valore](http://i63.tinypic.com/1g18hv.png)
+
+Dentro la memoria riservata a ciascuna chiamata di funzione vi è allocato lo spazio per i parametri della chiamata, il valore di ritorno e tutte le altre variabili locali eventualmente dichiarate nel corpo della funzione. Questo significa che eventuali variabili con lo stesso nome di altre dichiarate all'esterno della funzione vengono mascherate da quelle "più interne" (si parla di _scoping delle variabili_).
+
+#### Passaggio di parametri
+Ci sono 4 modi in cui una funzione può prendere i propri parametri quando viene chiamata:
+* __Per valore__: il parametro deve essere un _r-value_, e questo viene copiato direttamente nella variabile in posizione corrispondente nella firma della funzione. Se la variabile viene modificata all'interno del corpo della funzione questi cambiamenti non si riflettono in alcun modo nel codice del chiamante.
+
+  Ad esempio:
+  ```cpp
+    int sottrazione(int a, int b) {
+      a -= b;
+      return a;
+    }
+    int main() {
+      int a = 5;
+      int b = 8;
+      int sott = sottrazione(a,b);
+      cout << "a = " << a << endl;
+      cout << "b = " << b << endl;
+      cout << "a - b = " << sott << endl;
+    }
+    
+    // Questo programma stampa
+    // a = 5
+    // b = 8
+    // a - b = -3
+    // Ovvero il valore di a non è cambiato dopo la chiamata a sottrazione(a,b), perché il valore dei parametri della chiamata
+    // è stato copiato nelle variabili locali della funzione
+  ```
+* __Per riferimento__: anziché passare un valore si passa un _indirizzo_ (_l-value_), le modifiche alle variabili che avvengono nella funzione chiamata si riflettono anche nel chiamante.
+  Esempio:
+  ```cpp
+    void pikachu(int &x, int y) {
+      a -= b;
+      b++;
+    }
+    
+    int main() {
+      int a = 5;
+      int b = 2;
+      // operatore & : indirizzo di a
+      // 2*b è un r-value
+      pikachu(&a,2*b);
+      cout << "a = " << a << endl;
+      cout << "b = " << b << endl;
+    }
+    
+    // Questo programma stampa
+    // a = 1
+    // b = 2
+    // Ovvero il valore di a in main è lo stesso che x ha alla fine dell'esecuzione della funzione
+    // b è invariato, perché viene passato 2*b per valore alla funzione
+  ```
+  Il passaggio per riferimento può essere molto utile per risparmiare memoria nel caso in cui si debba passare alla funzione un parametro molto "ingombrante" (vedi: modello a stack). __Attenzione ad eventuali modifiche!__ Per accertarsi di non modificare per sbaglio una variabile passata per riferimento si può usare il __passaggio per riferimento costante__ (`void f(const int &a)` darà un errore se cercate di modificare a nel corpo della funzione)
+* __Passaggio per puntatore__: si passa alla funzione un puntatore ad un oggetto e all'interno della funzione vi si accede tramite l'operatore di _dereference_ (`*`). Poco interessante per le nostre applicazioni: meglio evitare di incasinarsi con i puntatori :speak_no_evil:
+
+In ogni caso, quando programmate per le Olimpiadi, potete evitare di passare alcuni parametri che non devono essere unici per ogni chiamata, potete semplificare le firme dichiarando queste variabili come variabili globali.
+
 # Funzioni ricorsive
 
+# Esempi
 ## Fibonacci ricorsivo
 
 ```cpp
