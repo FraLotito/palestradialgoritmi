@@ -35,7 +35,7 @@ Si può evitare di dichiarare la funzione scrivendo la definizione della funzion
 
 #### In memoria
 Nella memoria del computer la memoria riservata a ciascuna funzione è allocata secondo una struttura a __stack__ o __pila__, in cui si può accedere ogni volta solo all'elemento inserito più di recente. Questo significa, in termini di funzioni, che il controllo del programma appartiene sempre e solo alla funzione che è stata chiamata per ultima, ovvero quella che sta in cima alla pila.
-![Passaggio di parametri per valore](http://i63.tinypic.com/1g18hv.png)
+![Stack](stack.png)
 
 Dentro la memoria riservata a ciascuna chiamata di funzione vi è allocato lo spazio per i parametri della chiamata, il valore di ritorno e tutte le altre variabili locali eventualmente dichiarate nel corpo della funzione. Questo significa che eventuali variabili con lo stesso nome di altre dichiarate all'esterno della funzione vengono mascherate da quelle "più interne" (si parla di _scoping delle variabili_).
 
@@ -95,10 +95,33 @@ Ci sono 4 modi in cui una funzione può prendere i propri parametri quando viene
 In ogni caso, quando programmate per le Olimpiadi, potete evitare di passare alcuni parametri che non devono essere unici per ogni chiamata, potete semplificare le firme dichiarando queste variabili come variabili globali.
 
 # Funzioni ricorsive
+> Funzione che chiama se stessa
+> * Due componenti:
+>     * una o più condizioni di terminazione
+>     * una o più chiamate ricorsive
 
-# Esempi
-## Fibonacci ricorsivo
+### Perché?
+Alcuni problemi e strutture dati hanno una definizione intrinsecamente ricorsiva, ad esempio tutti i problemi definiti per [induzione](https://it.wikipedia.org/wiki/Principio_d%27induzione). Sapere come tradurre la soluzione questi problemi in una funzione ricorsiva può quindi permetterci di avere in tempi brevi una soluzione che risolve almeno le istanze più semplici del problema.
+La maggior parte delle soluzioni ricorsive prevedono l'uso di una tecnica detta __*backtracking*__, la quale prevede di provare tutte le scelte e/o combinazioni possibili fino a trovare quella giusta (o di costo minore/guadagno maggiore, per i problemi di ottimizzazione).
 
+### Come?
+Per scrivere una funzione ricorsiva è sufficiente scrivere una funzione come descritto sopra, e fare in modo che questa abbia le due componenti della definizione:
+* una o più chiamate a se stessa: avviene come ogni altra chiamata (`funzione(parametri)`)
+* una o più condizioni di terminazione: dobbiamo evitare la ricorsione infinita (simile ai loop infiniti), e per farlo imponiamo un limite al numero di chiamate che possono essere attive contemporaneamente (il numero di chiamate in genere dipende da uno dei parametri in input del problema)
+
+#### Esempio: fattoriale
+```cpp
+   long long f(int n) {
+      if (n == 0) {
+         return 1;
+      } else {
+         long long res = f(n-1);
+         return res * n;
+      }
+   }
+```
+![Fattoriale](Rec.png)
+#### Esempio: Fibonacci
 ```cpp
 int fibonacci(int n) {
   if (n==0) {
@@ -110,3 +133,6 @@ int fibonacci(int n) {
   }
 }
 ```
+
+### Backtrack e il problema della scelta
+COMING SOON...
