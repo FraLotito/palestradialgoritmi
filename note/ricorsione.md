@@ -133,6 +133,45 @@ int fibonacci(int n) {
   }
 }
 ```
+![Fibonacci](Fibonacci.png)
 
-### Backtrack e il problema della scelta
-COMING SOON...
+## Backtrack e il problema della scelta
+> Il __*Backtracking*__ è una tecnica di programmazione che prevede di provare tutte le possibili soluzioni e di selezionare quelle ammissibili (problemi di decisione/è richiesto di trovare una soluzione qualsiasi) oppure quelle migliori (problemi di ottimizzazione).
+
+Questa tecnica è fortemente legata alla ricorsione, in quanto la struttura delle chiamate ricorsive ci permette di tenere traccia della "storia" delle scelte che abbiamo effettuato, per tornare indietro e provare ad effettuarne una diversa.
+
+### Perché?
+Il backtrack viene usato quando si deve esploare tutto lo spazio delle soluzioni di un problema (es. stampare _tutte_ le permutazioni di un array) oppure quando il problema da dei vincoli sull'input sufficientemente piccoli da permettere di provare tutte gli stati possibili del problema e selezionare quello migliore. In generale tutti i problemi si possono risolvere con backtracking (es. ordinamento provando tutte le possibili permutazioni dell'array), spesso tuttavia il tempo impiegato da questi algoritmi per trovare la soluzione non è accettabile.
+
+### Come?
+Consideriamo il problema [Piastrelle](https://training.olinfo.it/#/task/piastrelle/statement). Chiaramente in questo caso dobbiamo controllare tutte le possibili piastrellature per poterle stampare; inoltre N è al più 25, sufficientemente piccolo per una soluzione ricorsiva.
+Abbiamo un corridoio di lunghezza N, da ricoprire con piastrelle di lunghezza 1 e 2. Possiamo pensare di dividere il corridoio in N slot di grandezza 1, inizialmente tutti liberi; una piastrella piccola occupa uno slot, una grande ne copre due.
+Partiamo da un estremo del corridoio. Cosa possiamo fare?
+* Inserire una piastrella piccola, rimarranno N-1 slot
+* Inserire una piastrella grande, rimarranno N-2 slot
+
+   _**Quale decisione prendere?**_ Entrambe le scelte sono valide (purché N > 1): le proviamo entrambe. Questo significa provare prima a     piastrellare un corridoio di N-1 slot liberi (è dunque la stessa operazione di riempire N slot, è cambiato solo il parametro), poi a piastrellare un corridoio lungo N-2. Possiamo ripetere questa operazione finché abbiamo slot disponibili.
+   _**Una volta finiti gli slot liberi, cosa succede?**_ Se non abbiamo più posto per inserire le piastrelle, significa che possiamo stampare questa configurazione come una delle soluzioni ammissibili.
+   _**Come fare a sapere quale sia la configurazione ammissibile?**_ Dobbiamo, ogni volta che decidiamo di usare un tipo di piastrella, salvare questa scelta in un vettore (**vettore delle scelte**), in modo tale che, una volta effettuate tutte le scelte, abbiamo una traccia su quelle precedenti. Usiamo una variabile che tenga conto di quante piastrelle abbiamo usato nella configurazione corrente.
+
+```cpp
+int choices[25];
+
+void piastrella(int n, int c) {
+    if (n == 0) {
+        for (int i=0; i < c; i++) {
+            if (choices[i] == 1) {
+                out << "[O]";
+            } else {
+                out << "[OOOO]";
+            }
+        }
+        out << endl;
+    } else if (n > 0) {
+        choices[c] = 1;
+        piastrella(n-1,c+1);
+        choices[c] = 2;
+        piastrella(n-2,c+1);
+    }
+}
+```cpp
