@@ -100,6 +100,8 @@ In ogni caso, quando programmate per le Olimpiadi, potete evitare di passare alc
 >     * una o più condizioni di terminazione
 >     * una o più chiamate ricorsive
 
+![Ricorsione](https://i.redd.it/0wap3cp4khm01.jpg)
+
 ### Perché?
 Alcuni problemi e strutture dati hanno una definizione intrinsecamente ricorsiva, ad esempio tutti i problemi definiti per [induzione](https://it.wikipedia.org/wiki/Principio_d%27induzione). Sapere come tradurre la soluzione questi problemi in una funzione ricorsiva può quindi permetterci di avere in tempi brevi una soluzione che risolve almeno le istanze più semplici del problema.
 La maggior parte delle soluzioni ricorsive prevedono l'uso di una tecnica detta __*backtracking*__, la quale prevede di provare tutte le scelte e/o combinazioni possibili fino a trovare quella giusta (o di costo minore/guadagno maggiore, per i problemi di ottimizzazione).
