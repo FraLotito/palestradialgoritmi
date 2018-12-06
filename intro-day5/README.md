@@ -1,13 +1,12 @@
 # Day 5
 
 ## Problemi della settimana
-* [ponti](https://training.olinfo.it/#/task/ponti/statement) - Own
-* [sentieri](https://training.olinfo.it/#/task/sentieri/statement) - OII territoriali 2014
-* [tecla](https://training.olinfo.it/#/task/tecla/statement) - OII territoriali 2017
-* [dijkstra](https://training.olinfo.it/#/task/dijkstra/statement) - Volterra
-* [mst](https://training.olinfo.it/#/task/mst/statement) - Volterra
-* [barbablu](https://training.olinfo.it/#/task/barbablu/statement) - OII territoriali 2012
-* [ois_vapoare](https://training.olinfo.it/#/task/ois_vapoare/statement) - OIS2018 round 3
+* [discesa](https://training.olinfo.it/#/task/discesa/submissions) - OII territoriali 2017
+* [sommelier](https://training.olinfo.it/#/task/sommelier/statement) - OII territoriali 2014 - Dovreste averlo già risolto in maniera ricorsiva, aggiungete memoization, provate anche a scriverlo bottom-up
+* [poldo](https://training.olinfo.it/#/task/poldo/statement) - OII territoriali 2004
+* [luiss_suppli](https://training.olinfo.it/#/task/luiss_suppli/statement) - Gara di allenamento LUISS 2018
+* [torri](https://training.olinfo.it/#/task/torri/statement) - Own
+* [fermata](https://training.olinfo.it/#/task/fermata/statement) - OII 2012 (difficile)
 
 ## Bonus
 Avete risolto tutti i problemi della settimana ed avete voglia di farne altri? :sunglasses:
