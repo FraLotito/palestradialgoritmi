@@ -15,3 +15,4 @@ E' dato in input un grafo non orientato e possibilmente non connesso. Bisogna tr
 ### Idee generali per risolvere l'esercizio
 Ricavare il numero di componenti connesse: scorro ogni nodo, se non l'ho visitato faccio partire una dfs e visiterò tutti i nodi della sua componente connessa, se l'ho già visitato lo ignoro.
 Una volta ricavato il numero di componenti connesse, è solo questione di matematica da scuola elementare :)
+
