@@ -16,7 +16,7 @@ permetterci di mangiare.
 Supponiamo di star guardando il panino nella posizione n e che per le scelte fatte fino ad ora il peso massimo che possiamo mangiare sia maxpeso.
 Allora il massimo numero di panini che possiamo mangiare dall'n-esimo in poi (cioè sol(n,maxpeso)) sarà:
 
-1) il massimo tra sol(n+1,peso[n])+1 (caso in cui mangio il panino) e sol(n+1,maxpeso) (caso in cui non lo mangio), se peso[n]<maxpeso 
-2) sol(n+1,maxpeso), se peso[n]>=maxpeso (cioè se non posso mangiare questo panino)
+1) il massimo tra sol(n+1,peso[n])+1 (caso in cui mangio il panino) e sol(n+1,maxpeso) (caso in cui non lo mangio), se peso[n]<maxpeso;
+2) sol(n+1,maxpeso), se peso[n]>=maxpeso (cioè se non posso mangiare questo panino).
 
 La soluzione finale al nostro problema sarà sol(0,infinito), dove 0 è la posizione del primo panino e infinito un peso moooolto alto che evita di avere limiti iniziali quando Poldo comincia a mangiare i panini.
