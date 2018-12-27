@@ -12,6 +12,7 @@ Problemi:
 * [G](https://open.kattis.com/contests/usc9o4/problems/cold)
 
 <br>Durata: 2h
+<br>Se si compete in squadra (max 3) è possibile usare solo un computer per scrivere codice e sottomettere soluzioni
 
 ## Risultati
 ![Classifica](https://github.com/oii-unitn/palestradialgoritmi2018/blob/master/intro-day6/media/classifica.png)
