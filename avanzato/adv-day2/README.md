@@ -1,5 +1,6 @@
 # Day 1
 
+<!---
 Nota1: avanzate di categoria solo dopo aver risolto (100 / 100) tutti i problemi della categoria precedente!
 
 Nota2: se avete problemi con la programmazione, quindi non avete mai programmato, non sapete cosa sia una funzione o una variabile o un vettore, potete consultare la guida del Prof. Bugatti linkata in home page (primi due capitoli). Se avete tutto abbastanza chiaro, potete seguire le note sul C++ che verranno aggiornate man mano in questo repository, che però non andranno a coprire le basi ma solo argomenti specifici utili per le Olimpiadi.
@@ -23,3 +24,4 @@ Abbiamo altri problemi già pronti, mandateci una mail!
 
 ## Soluzioni
 Le soluzioni saranno presentate durante il prossimo incontro e caricate in questa cartella, cercate di risolvere tutti i problemi prima di Venerdì prossimo!
+-->
