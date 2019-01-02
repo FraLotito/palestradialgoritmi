@@ -35,7 +35,7 @@ Si può evitare di dichiarare la funzione scrivendo la definizione della funzion
 
 #### In memoria
 Nella memoria del computer la memoria riservata a ciascuna funzione è allocata secondo una struttura a __stack__ o __pila__, in cui si può accedere ogni volta solo all'elemento inserito più di recente. Questo significa, in termini di funzioni, che il controllo del programma appartiene sempre e solo alla funzione che è stata chiamata per ultima, ovvero quella che sta in cima alla pila.
-![Stack](stack.png)
+![Stack](media/stack.png)
 
 Dentro la memoria riservata a ciascuna chiamata di funzione vi è allocato lo spazio per i parametri della chiamata, il valore di ritorno e tutte le altre variabili locali eventualmente dichiarate nel corpo della funzione. Questo significa che eventuali variabili con lo stesso nome di altre dichiarate all'esterno della funzione vengono mascherate da quelle "più interne" (si parla di _scoping delle variabili_).
 
@@ -122,7 +122,7 @@ Per scrivere una funzione ricorsiva è sufficiente scrivere una funzione come de
       }
    }
 ```
-![Fattoriale](Rec.png)
+![Fattoriale](media/Rec.png)
 #### Esempio: Fibonacci
 ```cpp
 int fibonacci(int n) {
@@ -135,7 +135,7 @@ int fibonacci(int n) {
   }
 }
 ```
-![Fibonacci](Fibonacci.png)
+![Fibonacci](media/Fibonacci.png)
 
 ## Backtrack e il problema della scelta
 > Il __*Backtracking*__ è una tecnica di programmazione che prevede di provare tutte le possibili soluzioni e di selezionare quelle ammissibili (problemi di decisione/è richiesto di trovare una soluzione qualsiasi) oppure quelle migliori (problemi di ottimizzazione).
