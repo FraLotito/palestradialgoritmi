@@ -15,7 +15,7 @@ Problemi:
 <br>Se si compete in squadra (max 3) è possibile usare solo un computer per scrivere codice e sottomettere soluzioni
 
 ## Risultati
-![Classifica](https://github.com/oii-unitn/palestradialgoritmi2018/blob/master/intro-day6/media/classifica.png)
+![Classifica](https://github.com/oii-unitn/palestradialgoritmi2018/blob/master/base/intro-day6/media/classifica.png)
 
 ## Commenti
 Credo di essere stato abbastanza cattivo nella scelta dei problemi :smiling_imp:, tranne 2 che erano di "riscaldamento" (A, G). 
