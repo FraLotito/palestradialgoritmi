@@ -11,3 +11,7 @@ Raccolta di esercizi di programmazione dinamica con approccio prima ricorsivo, p
 * Massimo sottovettore comune (MSC/LCS)
 * [Minisupplì](https://training.olinfo.it/#/task/luiss_suppli/statement)
 * [Greedy Santa](https://training.olinfo.it/#/task/ois_christmas/statement)
+
+## False friends
+La programmazione dinamica non è la soluzione a tutti i vostri problemi:
+* [Studio amico](https://training.olinfo.it/#/task/abc_studioamico)
