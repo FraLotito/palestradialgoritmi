@@ -60,6 +60,8 @@ int main() {
     return 0;
 }
 ```
+**Esercizio**: scrivere un programma che, inseriti due numeri da tastiera, calcoli e stampi somma, differenza, prodotto, quoziente e resto della divisione del primo per il secondo.
+
 ## Le istruzioni if e else
 ```cpp
 #include<iostream>
@@ -76,3 +78,4 @@ int main() {
     return 0;
 }
 ```
+**Esercizio**: scrivere un programma che, inserito un numero da tastiera, stampi se è pari o dispari.
