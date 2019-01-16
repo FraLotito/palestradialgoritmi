@@ -18,6 +18,8 @@ int main() {
     return 0;
 }
 ```
+Per stampare un messaggio a video si usa l'istruzione cout, *cout << "Messaggio"*; oppure *cout << nomediunavariabile;*
+
 ## Le variabili
 ```cpp
 #include<iostream>
@@ -34,6 +36,10 @@ int main() {
     return 0;
 }
 ```
+Ci sono quattro tipi principali di variabili: int (numeri interi), double e float (numeri decimali), char (caratteri). I caratteri vengono sempre rappresentati tra apici, come nell'esempio: 'a'.
+
+Per quanto riguarda la stampa a video, ricordo che (ad esempio) con *cout << a;* viene stampato il valore che ha la variabile a in questo punto preciso del programma.
+
 ## Lettura da tastiera
 ```cpp
 #include<iostream>
