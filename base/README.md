@@ -36,8 +36,26 @@ int main() {
     int a, b;
     cout << "Inserire a: ";
     cin >> a;
-    cout << "Inserire b: ";
+    cout << "\nInserire b: ";
     cin >> b;
+    
+    return 0;
+}
+```
+## Operazioni con le variabili
+```cpp
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a = 3, b = 2;
+    int somma = a+b;
+    int differenza = a-b;
+    int prodotto = a*b;
+    int rapporto = a/b;
+    int resto = a%b;
+
+    cout << somma << " " << differenza << " " << prodotto << " " << rapporto << " " << resto << endl;
     
     return 0;
 }
