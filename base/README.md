@@ -1,5 +1,11 @@
 # Corso base di C++
 
+## Creare un file C++
+Il programma che usiamo si chiama: CodeBlocks (se volete scaricarlo sul vostro computer ecco il link http://www.codeblocks.org/downloads/26, scaricate la versione: codeblocks-17.12mingw-setup.exe).
+Per creare un nuovo file: selezionare dal menù "File" la voce "New" e quindi "Empty file". Quando lo salvate ricordate di scrivere "nomefile.cpp", perchè stiamo programmando in C++, se venisse salvato come "nomefile.c" dovremmo usare C come linguaggio. 
+
+**Nota:** C++ è un estensione del linguaggio C.
+
 ## Hello world (stampa a video)
 
 ```cpp
