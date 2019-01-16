@@ -20,6 +20,8 @@ int main() {
 ```
 Per stampare un messaggio a video si usa l'istruzione cout, *cout << "Messaggio"*; oppure *cout << nomediunavariabile;*
 
+**NB:** Tutto il codice va scritto dentro al main e prima del return (per ora, poi vedremo cosa può essere scritto fuori).
+
 ## Le variabili
 ```cpp
 #include<iostream>
