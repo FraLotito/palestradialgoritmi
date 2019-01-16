@@ -55,6 +55,7 @@ int main() {
     return 0;
 }
 ```
+L'istruzione *cin >> a* legge il numero inserito da tastiera e lo salva nella variabile a.
 ## Operazioni con le variabili
 ```cpp
 #include<iostream>
