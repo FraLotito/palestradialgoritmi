@@ -33,5 +33,5 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
   
   ...
 
-* Scrivere un programma che stampi a video i primi N numeri primi, con N numero inserito da tastiera.
+* Scrivere un programma che dica se un numero inserito da tastiera è primo.
 
