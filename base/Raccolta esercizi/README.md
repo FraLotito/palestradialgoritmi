@@ -26,9 +26,12 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 
 <!--Ciclo for-->
 * Scrivere un programma che stampi 
-99 scimmie saltavano sul letto una cadde a terra e si ruppe il cervelletto
-98 scimmie saltavano sul letto una cadde a terra e si ruppe il cervelletto
-...
+
+  99 scimmie saltavano sul letto una cadde a terra e si ruppe il cervelletto
+  
+  98 scimmie saltavano sul letto una cadde a terra e si ruppe il cervelletto
+  
+  ...
 
 * Scrivere un programma che stampi a video i primi N numeri primi, con N numero inserito da tastiera.
 
