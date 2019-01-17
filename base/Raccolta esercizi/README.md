@@ -1,4 +1,4 @@
-## Esercizi
+## Link a siti in cui trovare esercizi
 
 Due siti che possono essere usati
 
@@ -12,7 +12,7 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 
 3. [Easy3](https://training.olinfo.it/#/task/easy3/statement)
 
-# Alcuni esercizi
+## Alcuni esercizi
 
 <!--Input e output-->
 * Scrivere un programma che legga 5 numeri interi, li sommi e stampi a video la somma. (Versione successiva: far inserire il numero N di interi da sommare da tastiera).
