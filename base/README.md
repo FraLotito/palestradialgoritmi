@@ -95,10 +95,15 @@ int main() {
 }
 ```
 In generale l'istruzione if controlla la *condizione*, se è vera esegue le *istruzioni 1*, altrimenti esegue le *istruzioni 2*: 
-*if(condizione){
+
+*if(condizione){*
+
     istruzioni 1
+
 }else{
+
     istruzioni 2
+
 }*
 
 **Esercizio**: scrivere un programma che, inserito un numero da tastiera, stampi se è pari o dispari.
