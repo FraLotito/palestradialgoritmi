@@ -34,4 +34,5 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
   ...
 
 * Scrivere un programma che dica se un numero inserito da tastiera è primo.
+* Scrivere un programma che, inserito un numero N da tastiera, stampi la somma di tutti i numeri da 1 ad N (senza usare formule già conosciute!).
 
