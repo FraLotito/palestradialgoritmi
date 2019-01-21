@@ -120,7 +120,7 @@ default:    // è opzionale
     istruzioni default;
  } 
 ```
-**Esercizio**: scrivere un programma che dati due interi A e B ed un'operazione (quindi un simbolo tra +, -, * * * ,/) stampi a video il risultato dell'operazione (A+B oppure A-B eccetera).
+**Esercizio**: scrivere un programma che dati due interi A e B ed un'operazione (quindi un simbolo tra +, -, * ,/) stampi a video il risultato dell'operazione (A+B oppure A-B eccetera).
 
 ## Il while
 ```cpp
