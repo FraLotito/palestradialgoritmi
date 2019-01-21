@@ -12,19 +12,25 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 
 3. [Easy3](https://training.olinfo.it/#/task/easy3/statement)
 
-## Alcuni esercizi
-
+# Alcuni esercizi
 <!--Input e output-->
-* Scrivere un programma che legga 5 numeri interi, li sommi e stampi a video la somma. (Versione successiva: far inserire il numero N di interi da sommare da tastiera).
 
-* Scrivere un programma che inserito un numero, stampi le migliaia, le centinaia, le decine e le unità dalle quali è composto.
+* Scrivere un programma che dati in input base e altezza di un rettangolo, calcoli e stampi l'area e il perimetro.
+
+* Scrivere un programma che legga N = 5 numeri interi, li sommi e stampi a video la somma. 
+
+* Scrivere un programma che inserito un numero, stampi le migliaia, le centinaia, le decine e le unità dalle quali è composto. (E volendo stampi la somma delle cifre del numero).
 
 <!--If else-->
-* Scrivere un programma che, inseriti 5 numeri interi, calcola quanti numeri pari sono stati inseriti.
+* Scrivere un programma che, inseriti N = 5 numeri interi, calcola quanti numeri pari sono stati inseriti.
 
-* Scrivere un programma che, inseriti 5 numeri interi, stampa a video il maggiore e il minore.
+* Scrivere un programma che, inseriti N = 5 numeri interi, stampa a video il maggiore e il minore.
 
-<!--Ciclo for-->
+<!--Vettori-->
+
+* Usando i vettori, modificare i precedenti programmi facendo inserire il numero N di interi considerati da tastiera.
+
+<!--Ciclo for o while-->
 * Scrivere un programma che stampi 
 
   99 scimmie saltavano sul letto una cadde a terra e si ruppe il cervelletto
@@ -34,5 +40,7 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
   ...
 
 * Scrivere un programma che dica se un numero inserito da tastiera è primo.
+
 * Scrivere un programma che, inserito un numero N da tastiera, stampi la somma di tutti i numeri da 1 ad N (senza usare formule già conosciute!).
+
 
