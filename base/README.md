@@ -106,4 +106,27 @@ if(condizione){
 
 **Esercizio**: scrivere un programma che, inserito un numero da tastiera, stampi se è pari o dispari.
 
-**Esercizio**: (in cui serve usare il while) scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
+## Lo switch
+```cpp
+switch(espressione intera) { 
+case (valore costante 1): 
+    istruzioni1;
+    break; 
+case (valore costante 2):
+    istruzioni2;
+    break;  
+...
+default:    // è opzionale 
+    istruzioni default;
+ } 
+```
+**Esercizio**: 
+
+## Il while
+```cpp
+while(condizione) { 
+    istruzioni;
+} 
+```
+
+**Esercizio**: scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
