@@ -14,7 +14,7 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 
 # Alcuni esercizi
 
-**Input e output**
+**Input e output (cin e cout)**
 
 1.1) Scrivere un programma che dati in input base e altezza di un rettangolo, calcoli e stampi l'area e il perimetro.
 
@@ -44,7 +44,7 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 
 **Vettori**
 
-4.1) Usando i vettori, modificare i precedenti programmi (esercizi 2,4,5) facendo inserire il numero N di interi considerati da tastiera.
+4.1) Usando i vettori, modificare i precedenti programmi (esercizi 1.2, 2.1, 2.2) facendo inserire il numero N di interi considerati da tastiera.
 
 **Matrici**
 
