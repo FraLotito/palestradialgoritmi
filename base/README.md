@@ -132,11 +132,9 @@ while(condizione) {
 **Esercizio**: scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
 
 ## Input e output su file
-Se il nostro programma, invece che leggere da tastiera e stampare a video, dovesse scrivere e leggere da file (solitamente file di estensione .txt), deve usare nuovi oggetti al posto di *cin* e *cout*.
+Se il nostro programma, invece che leggere da tastiera e stampare a video, dovesse scrivere e leggere da file (solitamente file di estensione .txt), deve usare nuovi oggetti al posto di *cin* e *cout*. Ci serve la libreria *fstream*, che contiene tutto il necessario per lavorare con oggetti di tipo *filestream*. Noi useremo *ifstream* per leggere dati da file e *ofstream* per scrivere. Prima di tutto dobbiamo creare un file di input ("nomefileinput.txt") nella stessa cartella in cui è salvato il programma. In questo file scriverete voi qui quali saranno i dati da leggere. 
 
-Ci serve la libreria *<fstream>*, che contiene tutto il necessario per lavorare con oggetti che sono di tipo *filestream*. Noi useremo *ifstream* per leggere dati da file, *ofstream* per scrivere. Prima di tutto dobbiamo creare un file di input ("nomefileinput.txt") nella stessa cartella del programma. Qui scriverete voi qui quali saranno i dati da leggere. Poi nel nostro programma possiamo aprire il file da cui leggere e creare un file su cui scrivere (che viene creato automaticamente).
-    
-Dopo possiamo leggere da "nomefileinput.txt" e possiamo scrivere in "nomefileoutput.txt", con i comandi *in* e *out*.
+Nel nostro programma possiamo aprire il file da cui leggere e un file su cui scrivere (che viene creato automaticamente), come è riportato nel programma qui sotto. Possiamo leggere da "nomefileinput.txt" e possiamo scrivere in "nomefileoutput.txt", con i comandi *in* e *out*.
 
 ```cpp
 #include<fstream>
