@@ -42,7 +42,7 @@ Ci sono quattro tipi principali di variabili: int (numeri interi), double e floa
 
 Per quanto riguarda la stampa a video, ricordo che (ad esempio) con *cout << a;* viene stampato il valore che ha la variabile a in questo punto preciso del programma.
 
-## Lettura da tastiera
+## Input e output
 ```cpp
 #include<iostream>
 using namespace std;
