@@ -151,7 +151,10 @@ int main(){
 	in >> a; //inserisco quello che leggo nella variabile a
 
 	out << "Ciao! La variabile a vale " << a;
-
+	
+	in.close();
+	out.close();
+    
 	return 0;
 }
 
