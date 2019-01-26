@@ -133,16 +133,6 @@ Lo switch si usa per eseguire istruzioni diverse a seconda del valore di una pre
 
 **Esercizio (la calcolatrice)**: scrivere un programma che dati due interi A e B ed un'operazione (quindi un simbolo tra +, -, * ,/) stampi a video il risultato dell'operazione (A+B oppure A-B eccetera).
 
-## Il while
-```cpp
-while(condizione) { 
-    istruzioni;
-} 
-```
-Il while serve per eseguire ripetutamente un insieme di istruzioni, finchè una certa condizione è vera. La condizione rappresenta un controllo booleano (vero/falso) che viene effettuato ad ogni iterazione (cioè ad ogni "giro"). All'inizio di ogni iterazione viene fatto un controllo: se la condizione è falsa il while termina, se è vera vengono eseguite le istruzioni e poi viene controllata nuovamente la condizione, e così via...
-
-**Esercizio**: scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
-
 ## Input e output su file
 Se il nostro programma, invece che leggere da tastiera e stampare a video, dovesse scrivere e leggere da file (solitamente file di estensione .txt), deve usare nuovi oggetti al posto di *cin* e *cout*. Ci serve la libreria *fstream*, che contiene tutto il necessario per lavorare con oggetti di tipo *filestream*. Useremo *ifstream* per leggere dati da file e *ofstream* per scrivere. 
 
@@ -172,3 +162,23 @@ int main(){
 
 ```
 
+## Il ciclo while
+```cpp
+while(condizione) { 
+    istruzioni;
+} 
+```
+Il while serve per eseguire ripetutamente un insieme di istruzioni, finchè una certa condizione è vera. La condizione rappresenta un controllo booleano (vero/falso) che viene effettuato ad ogni iterazione (cioè ad ogni "giro", "ciclo"). All'inizio di ogni iterazione viene fatto un controllo: se la condizione è falsa il while termina, se è vera vengono eseguite le istruzioni e poi viene controllata nuovamente la condizione, e così via...
+
+**Esercizio**: scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
+
+## Il ciclo for
+```cpp
+int i;
+for(i = valore iniziale; condizione; incremento della variabile i) { 
+  istruzioni; 
+} 
+```
+I cicli for seguono un meccanismo simile al while, vengono solitamente usati quando si conosce il numero di iterazioni da fare (mentre il while solitamente quando questo numero non è conosciuto).
+
+Il for fa uso di una variabile, in questo caso la variabile i, come contatore del numero di iterazioni. Come prima cosa, a questa variabile viene dato un valore iniziale. Finchè il valore di i rispetta la condizione, vengono eseguite le istruzioni contenute tra la parentesi graffe. Eseguito il blocco di istruzioni, la variabile i, viene incrementata secondo l'incremento e, se la condizione è soddisfatta, il ciclo viene ripetuto. 
