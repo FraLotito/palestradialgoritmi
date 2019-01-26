@@ -58,6 +58,7 @@ int main() {
 }
 ```
 L'istruzione *cin >> a* legge il numero inserito da tastiera e lo salva nella variabile a.
+
 ## Operazioni con le variabili
 ```cpp
 #include<iostream>
@@ -120,6 +121,8 @@ default:    // è opzionale
     istruzioni default;
  } 
 ```
+Lo switch si usa per eseguire istruzioni diverse a seconda del valore di una precisa espressione. Per lo stesso scopo potrebbero essere utilizzati svariati if con molte condizioni, ma in queste situazioni l'uso dello switch semplifica di molto il codice. Lo switch valuta il valore dell'espressione passata come parametro e se il valore corrisponde ad uno di quelli specificati nei *case* viene eseguito il blocco di istruzioni corrispondente. Se il blocco individuato termina con un'istruzione break allora il programma esce dallo switch, altrimenti, vengono eseguiti anche i blocchi successivi finchè non viene trovato un *break* o non si raggiunge l'ultimo blocco dello switch. Se nessun blocco corrisponde al parametro passsato allora viene eseguito il blocco default, se presente. 
+
 **Esercizio**: scrivere un programma che dati due interi A e B ed un'operazione (quindi un simbolo tra +, -, * ,/) stampi a video il risultato dell'operazione (A+B oppure A-B eccetera).
 
 ## Il while
@@ -128,6 +131,7 @@ while(condizione) {
     istruzioni;
 } 
 ```
+Il while serve per eseguire ripetutamente un insieme di istruzioni, finchè una certa condizione è vera. La condizione rappresenta un controllo booleano (vero/falso) che viene effettuato ad ogni iterazione (cioè ad ogni "giro"). All'inizio di ogni iterazione viene fatto un controllo: se la condizione è falsa il while termina, se è vera vengono eseguite le istruzioni e poi viene controllata nuovamente la condizione, e così via...
 
 **Esercizio**: scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
 
