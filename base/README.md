@@ -23,6 +23,8 @@ Per stampare un messaggio a video si usa l'istruzione cout, *cout << "Messaggio"
 **NB:** Tutto il codice va scritto dentro al main e prima del return (per ora, poi vedremo cosa può essere scritto fuori).
 
 ## Le variabili
+
+**Esempio:**
 ```cpp
 #include<iostream>
 using namespace std;
@@ -43,6 +45,8 @@ Ci sono quattro tipi principali di variabili: int (numeri interi), double e floa
 Per quanto riguarda la stampa a video, ricordo che (ad esempio) con *cout << a;* viene stampato il valore che ha la variabile a in questo punto preciso del programma.
 
 ## Input e output
+
+**Esempio:**
 ```cpp
 #include<iostream>
 using namespace std;
@@ -60,6 +64,8 @@ int main() {
 L'istruzione *cin >> a* legge il numero inserito da tastiera e lo salva nella variabile a.
 
 ## Operazioni con le variabili
+
+**Esempio:**
 ```cpp
 #include<iostream>
 using namespace std;
@@ -80,6 +86,8 @@ int main() {
 **Esercizio**: scrivere un programma che, inseriti due numeri da tastiera, calcoli e stampi somma, differenza, prodotto, quoziente e resto della divisione del primo per il secondo. Potete calcolare anche la radice: basta aggiungere la libreria *math.h* (quindi all'inizio mettere *#include<math.h>*) e usare l'operazione *sqrt()*.
 
 ## Le istruzioni if e else
+
+**Esempio:**
 ```cpp
 #include<iostream>
 using namespace std;
