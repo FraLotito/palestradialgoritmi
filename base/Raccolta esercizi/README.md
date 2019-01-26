@@ -49,7 +49,7 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 
 Usando i vettori, modificare i precedenti programmi facendo inserire il numero N di interi considerati da tastiera. **Assunzione:** assumiamo che il numero N sia al massimo 1000.
 
-4.1) Scrivere un programma che legga un intero N ed N numeri interi, li sommi e stampi a video la somma. ().
+4.1) Scrivere un programma che legga un intero N ed N numeri interi, li sommi e stampi a video la somma.
 
 4.2) Scrivere un programma che legga un intero N ed N numeri interi, poi calcoli quanti numeri pari sono stati inseriti.
 
