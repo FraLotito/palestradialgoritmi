@@ -137,7 +137,7 @@ Se il nostro programma, invece che leggere da tastiera e stampare a video, doves
 Prima di tutto dobbiamo creare un file di input (ad esempio "input.txt") nella stessa cartella in cui è salvato il programma. In questo file scriviamo i dati da leggere. 
 
 Ora nel nostro programma possiamo aprire il file da cui leggere e il file su cui scrivere (se non esiste viene creato automaticamente).
-Con il comando *ifstream in ("input.txt");* andiamo ad aprire "input.txt", file da cui possiamo leggere con il comando *in* (che funziona allo stesso modo del *cin*). Con *ofstream out ("output.txt");* viene creato o aperto (se già esistente) un file "output.txt" su cui possiamo scrivere con il comando *out* (analogo al *cout*).
+Con il comando *ifstream in ("input.txt");* andiamo ad aprire "input.txt", da cui possiamo leggere con il comando *in* (che funziona allo stesso modo del *cin*). Con *ofstream out ("output.txt");* viene creato o aperto (se già esistente) un file "output.txt" su cui possiamo scrivere con il comando *out* (analogo al *cout*).
 
 ```cpp
 #include<fstream>
