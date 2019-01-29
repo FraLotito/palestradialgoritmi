@@ -45,7 +45,7 @@ Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle o
 3.4) Scrivere un programma che, inserito un numero N da tastiera, stampi la somma di tutti i numeri da 1 ad N (senza usare formule già conosciute!).
 
 
-**Vettori**
+**Vettori (NB: questi esercizi possono essere fatti *anche* senza l'uso dei vettori!)**
 
 Usando i vettori, modificare i precedenti programmi facendo inserire il numero N di interi considerati da tastiera. **Assunzione:** assumiamo che il numero N sia al massimo 1000.
 
