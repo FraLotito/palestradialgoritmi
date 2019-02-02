@@ -4,13 +4,7 @@ Due siti che possono essere usati
 
 Per iniziare: esercizi guidati dal sito https://www.hackerrank.com/domains/cpp (in base agli argomenti che si conoscono).
 
-Per le olimpiadi: https://training.olinfo.it/. I primi problemi dal sito delle olimpiadi:
-
-1. [Easy1](https://training.olinfo.it/#/task/easy1/statement)
-
-2. [Easy2](https://training.olinfo.it/#/task/easy2/statement)
-
-3. [Easy3](https://training.olinfo.it/#/task/easy3/statement)
+Per le olimpiadi: https://training.olinfo.it/. 
 
 # Alcuni esercizi
 
@@ -59,4 +53,24 @@ Usando i vettori, modificare i precedenti programmi facendo inserire il numero N
 
 5.1) Scrivere un programma che data una matrice, calcoli la somma di tutti i suoi elementi.
 
+# E ora ... Gli esercizi delle Olimpiadi di Informatica!
 
+I primi problemi dal sito delle olimpiadi:
+
+1. [Easy1](https://training.olinfo.it/#/task/easy1/statement)
+
+2. [Easy2](https://training.olinfo.it/#/task/easy2/statement)
+
+3. [Easy3](https://training.olinfo.it/#/task/easy3/statement)
+
+E dopo aver risolto i primi tre esercizi (con 100/100):
+
+1. [Collatz](https://training.olinfo.it/#/task/collatz/statement)
+
+2. [Azioni](https://training.olinfo.it/#/task/luiss_azioni/statement)
+
+3. [Figonacci](https://training.olinfo.it/#/task/figonacci/statement)
+
+4. [Spartizione](https://training.olinfo.it/#/task/figonacci/statement)
+
+5. [Pcollatz](https://training.olinfo.it/#/task/gator_pcollatz/statement)
