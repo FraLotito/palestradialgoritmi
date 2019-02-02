@@ -53,7 +53,7 @@ Usando i vettori, modificare i precedenti programmi facendo inserire il numero N
 
 5.1) Scrivere un programma che data una matrice, calcoli la somma di tutti i suoi elementi.
 
-# E ora ... Gli esercizi delle Olimpiadi di Informatica!
+## E ora ... Gli esercizi delle Olimpiadi di Informatica!
 
 I primi problemi dal sito delle olimpiadi:
 
