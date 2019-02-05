@@ -12,15 +12,15 @@ vector<vector<int> > graph;
 void bfs(int node) {
     queue<int> q;
     q.push(node);
-
+    visited[node] = true;
     while (!q.empty()) {
         int u = q.front();
         q.pop();
-        visited[u] = true;
         // Visita u qui
         for (int i=0; i<graph[u].size(); i++) {
             int v = graph[u][i];
             if (!visited[v]) {
+                visited[v] = true;
                 q.push(v);
             }
         }
