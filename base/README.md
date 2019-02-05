@@ -170,6 +170,25 @@ while(condizione) {
 ```
 Il while serve per eseguire ripetutamente un insieme di istruzioni, finchè una certa condizione è vera. La condizione rappresenta un controllo booleano (vero/falso) che viene effettuato ad ogni iterazione (cioè ad ogni "giro", "ciclo"). All'inizio di ogni iterazione viene fatto un controllo: se la condizione è falsa il while termina, se è vera vengono eseguite le istruzioni e poi viene controllata nuovamente la condizione, e così via...
 
+**Esempio:**
+
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+	int a = 10;
+	while(a>0){
+		cout << " a = " << a << endl;
+		a--;
+	}
+    
+	return 0;
+}
+
+```
+
+
 **Esercizio**: scrivere un programma che faccia continuare ad inserire un numero da tastiera fino a che questo non è pari.
 
 ## Il ciclo for
@@ -182,3 +201,20 @@ for(i = valore iniziale; condizione; incremento della variabile i) {
 I cicli for seguono un meccanismo simile al while, vengono solitamente usati quando si conosce il numero di iterazioni da fare (mentre il while solitamente quando questo numero non è conosciuto).
 
 Il for fa uso di una variabile, in questo caso la variabile i, come contatore del numero di iterazioni. Come prima cosa, a questa variabile viene dato un valore iniziale. Finchè il valore di i rispetta la condizione, vengono eseguite le istruzioni contenute tra la parentesi graffe. Eseguito il blocco di istruzioni, la variabile i, viene incrementata secondo l'incremento e, se la condizione è soddisfatta, il ciclo viene ripetuto. 
+
+**Esempio:**
+
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+	int i;
+	for(i = 0; i<10; i++){
+		cout << " i = " << i << endl;
+	}
+    
+	return 0;
+}
+
+```
