@@ -22,7 +22,7 @@ Questo repository sarà il contenitore di tutte le attività che verranno propos
 
 ### Contatti
 
-Mail: oii.unitn@gmail.com
+Mail: oii.unitn@gmail.com oppure lotitoqf@gmail.com
 
 ### Team
 
