@@ -3,7 +3,7 @@
 ![Logo OII](https://training.olinfo.it/custom_images/logo.png)
 
 ### Introduzione
-Il Dipartimento di [Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it/ "DISI") dell'Università degli Studi di Trento, in collaborazione con la rete [STAAR](http://www.staarr.it/ "STAAR"), propone un percorso di allenamento per le Olimpiadi dell’Informatica per l’a.s. 2018–2019.
+Il Dipartimento di [Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it/ "DISI") dell'Università degli Studi di Trento, in collaborazione con la rete [STAAR](http://www.staarr.it/ "STAAR"), propone un percorso di allenamento per le Olimpiadi di Informatica per l’a.s. 2018–2019.
 
 Questo percorso di allenamento ha molteplici obiettivi:
 * far conoscere agli studenti lo studio degli algoritmi come uno degli argomenti fondamentali dell’informatica
