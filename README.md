@@ -26,12 +26,8 @@ Mail: oii.unitn@gmail.com
 
 ### Team
 
-[Francesco Lotito](https://github.com/FraLotito) - Mantainer repo
+[Francesco Lotito](https://github.com/FraLotito)
 
-[Giulia Carocari](https://github.com/geeooleea) - Mantainer repo
+[Giulia Carocari](https://github.com/geeooleea)
 
-[Marta Fornasier](https://github.com/MartaFornasier) - Mantainer repo
-
-Damiano Sartori
-
-Sergio Catalano
+[Marta Fornasier](https://github.com/MartaFornasier)
