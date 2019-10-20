@@ -16,7 +16,7 @@ Questo repository sarà il contenitore di tutte le attività che verranno propos
 ### Link utili
 [Correttore olimpiadi](https://training.olinfo.it/ "Correttore olimpiadi")
 
-[Guida alle olimpiadi di informatica Prof. Bugatti](https://www.imparando.net/sito/olimpiadi_di_informatica/guida_quinta_edizione.pdf "Guida olimpiadi")
+[Guida alle olimpiadi di informatica Prof. Bugatti](https://www.imparando.net/sito/olimpiadi_di_informatica/guida_sesta_edizione.pdf)
 
 [Sito Prof. Montresor](http://cricca.disi.unitn.it/montresor/ "Sito Montresor")
 
